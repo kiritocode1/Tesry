@@ -31,9 +31,9 @@ export default function Home () {
 			<div className="  flex flex-col items-start max-w-xl mx-auto p-4 relative h-[20rem]  mt-20 ">
 				<EvervaultCard text="TESRY.Co" className="sm:scale-150" />
 			</div>
-			<div className="w-full flex  flex-col items-center justify-center h-[90rem] gap-4">
+			<div className="w-full flex  flex-col items-center justify-center sm:h-[90rem] gap-4  mt-40 md:mt-0  md:-translate-y-20">
 
-				<h1 className={'scale-[9] mb-20' }  style={LogoFont.style}>About US</h1>
+				<h1 className={'scale-[9] mb-20 ' }  style={LogoFont.style}>About US</h1>
 				<BentoGridThirdDemo />
 			</div>
 		</main>
