@@ -77,14 +77,16 @@ export const ProductItem = ({
 	description,
 	href,
 	src,
+	role,
 }: {
 	title: string;
 	description: string;
 	href: string;
-	src: string;
+		src: string;
+	role?:string
 }) => {
 	return (
-		<Link href={href} className="flex space-x-2">
+		<Link href={href} className="flex space-x-2" target="_blank">
 			<Image
 				src={src}
 				width={140}
@@ -96,6 +98,7 @@ export const ProductItem = ({
 				<h4 className="text-xl font-bold mb-1 text-black dark:text-white">
 					{title}
 				</h4>
+				<h4 className="text-md  italic ">{role ?? ""}</h4>
 				<p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
 					{description}
 				</p>
@@ -108,7 +111,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
 	return (
 		<Link
 			{...rest}
-			className="text-neutral-700 dark:text-neutral-200 hover:text-black ">
+			className="text-neutral-700 dark:text-neutral-400 hover:text-black dark:hover:text-white">
 			{children}
 		</Link>
 	);

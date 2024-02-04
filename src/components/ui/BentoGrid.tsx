@@ -3,6 +3,8 @@ import { cn } from "@/utils/cn";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import Fox from "./fox.jpg";
+import Triya from "./portraits/Triya.jpg";
+import Bobby from "./portraits/Bobby.png";
 import {
 	IconBoxAlignRightFilled,
 	IconClipboardCopy,
@@ -182,7 +184,7 @@ const SkeletonFour = () => {
 				variants={first}
 				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
 				<Image
-					src={Fox}
+					src={Bobby}
 					alt="avatar"
 					height="100"
 					width="100"
@@ -214,7 +216,7 @@ const SkeletonFour = () => {
 				variants={second}
 				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
 				<Image
-					src={Fox}
+					src={Triya}
 					alt="avatar"
 					height="100"
 					width="100"

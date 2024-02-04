@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/NavBar";
 import { cn } from "@/utils/cn";
 import Fox from "./fox.jpg";
-import Lucas from "./portraits/lucas.jpg";
-import Shane from "./portraits/shane.jpg";
-import Jerry from "./portraits/jerry.jpg";
+import Bobby from "./portraits/Bobby.png";
+import Kundal from "./portraits/Kundan.jpg";
+import Triya from "./portraits/Triya.jpg"
+
 export function NavbarDemo() {
 	return (
 		<div className="relative w-full flex items-center justify-center">
@@ -35,28 +36,32 @@ function Navbar({ className }: { className?: string }) {
 				<MenuItem setActive={setActive} active={active} item="Team">
 					<div className="  text-sm grid grid-cols-2 gap-10 p-4">
 						<ProductItem
-							title="John Doe"
+							title="Prabhdeep Singh"
 							href="https://google.com"
-							src={Lucas.src}
-							description="Professional Frisbee player as well , Id love to play with you"
+							src={Bobby.src}
+							description="I am a professional game dev too 😀 "
+							role="Co-Founder"
 						/>
 						<ProductItem
-							title="Jane Doe"
+							title="Triya Singh"
 							href="https://google.com"
-							src={Jerry.src}
-							description="hey User , nice to meet you"
+							src={Triya.src}
+							description="Notoriously thinking of catch phrases and "
+							role="Marketing Analyst"
 						/>
 						<ProductItem
-							title="Mx. Shane Doe"
+							title="Kundal Singh"
 							href="https://google.com"
-							src={Shane.src}
-							description="Never thought I would work for our Robot overlords , but here we are"
+							src={Kundal.src}
+							description="Never thought I would work with our Robot overlords , but here we are"
+							role="Co-Founder"
 						/>
 						<ProductItem
-							title="Rogue AI Inc."
-							href="https://google.com"
+							title="Aryan Kathawale"
+							href="https://kathawalearyan.in.net"
 							src={Fox.src}
-							description="I am AM , I am the first and the last , I am the one true god"
+							description="Fixing Bugs Forever "
+							role="Developer & Designer"
 						/>
 					</div>
 				</MenuItem>
@@ -66,6 +71,13 @@ function Navbar({ className }: { className?: string }) {
 						<HoveredLink href="/individual">Individual</HoveredLink>
 						<HoveredLink href="/team">Team</HoveredLink>
 						<HoveredLink href="/enterprise">Experiences</HoveredLink>
+					</div>
+				</MenuItem>
+				<MenuItem setActive={setActive} active={active} item="Labs">
+					<div className="flex flex-col space-y-4 text-sm">
+						<HoveredLink href="/labs">Experimental stuff</HoveredLink>
+
+
 					</div>
 				</MenuItem>
 			</Menu>
