@@ -6,7 +6,7 @@ import Fox from "./fox.jpg";
 import Bobby from "./portraits/Bobby.png";
 import Kundal from "./portraits/Kundan.jpg";
 import Triya from "./portraits/Triya.jpg"
-
+import Link from "next/link";
 export function NavbarDemo() {
 	return (
 		<div className="relative w-full flex items-center justify-center">
@@ -25,26 +25,33 @@ function Navbar({ className }: { className?: string }) {
 				className,
 			)}>
 			<Menu setActive={setActive}>
+
+					<Link href={"/"} className="dark:text-white ">
+					<MenuItem setActive={setActive} active={active} item="Home" >
+						Go back to main page</MenuItem>
+					</Link>
+
+
+
 				<MenuItem setActive={setActive} active={active} item="Products">
 					<div className="flex flex-col space-y-4 text-sm">
 						<HoveredLink href="/web-dev">Web Development</HoveredLink>
-						<HoveredLink href="/interface-design">Interface Design</HoveredLink>
-						<HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-						<HoveredLink href="/branding">Branding</HoveredLink>
+						<HoveredLink href="/ai">Ai Products</HoveredLink>
+						<HoveredLink href="/game-dev">Game Development</HoveredLink>
 					</div>
 				</MenuItem>
 				<MenuItem setActive={setActive} active={active} item="Team">
 					<div className="  text-sm grid grid-cols-2 gap-10 p-4">
 						<ProductItem
 							title="Prabhdeep Singh"
-							href="https://google.com"
+							href="https://www.linkedin.com/in/prabhdeep-singh-663883220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 							src={Bobby.src}
 							description="I am a professional game dev too 😀 "
 							role="Co-Founder"
 						/>
 						<ProductItem
 							title="Triya Singh"
-							href="https://google.com"
+							href="https://www.linkedin.com/in/triya-doshi-959374272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 							src={Triya.src}
 							description="Notoriously thinking of catch phrases and "
 							role="Marketing Analyst"
@@ -67,17 +74,13 @@ function Navbar({ className }: { className?: string }) {
 				</MenuItem>
 				<MenuItem setActive={setActive} active={active} item="Blog">
 					<div className="flex flex-col space-y-4 text-sm">
-						<HoveredLink href="/hobby">Hobby</HoveredLink>
-						<HoveredLink href="/individual">Individual</HoveredLink>
-						<HoveredLink href="/team">Team</HoveredLink>
-						<HoveredLink href="/enterprise">Experiences</HoveredLink>
+						<HoveredLink href="/blogs/hobby">Hobby</HoveredLink>
+						<HoveredLink href="/blogs/team"> Team Experiences</HoveredLink>
 					</div>
 				</MenuItem>
 				<MenuItem setActive={setActive} active={active} item="Labs">
 					<div className="flex flex-col space-y-4 text-sm">
 						<HoveredLink href="/labs">Experimental stuff</HoveredLink>
-
-
 					</div>
 				</MenuItem>
 			</Menu>

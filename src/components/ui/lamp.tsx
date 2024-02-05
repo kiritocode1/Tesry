@@ -2,13 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
-export function LampDemo({children}: {children: React.ReactNode}) {
-	return (
-        <LampContainer>
-            {children}
-		</LampContainer>
-	);
-}
 
 export const LampContainer = ({
 	children,
