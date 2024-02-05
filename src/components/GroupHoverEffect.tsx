@@ -9,39 +9,27 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
 	{
-		title: "Stripe",
+		title: "Designer Portfolio",
 		description:
-			"A technology company that builds economic infrastructure for the internet.",
-		link: "https://stripe.com",
+			"Design Implementation of a portfolio website for a designer. The website is built using React and Tailwind CSS.",
+		link: "https://kathawalearyan.in.net/",
 	},
 	{
-		title: "Netflix",
+		title: "Ai Live Image Creator",
 		description:
-			"A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-		link: "https://netflix.com",
+			"An AI-powered image creator that uses GANs to generate images based on user input. Shows implementation using websockets and Next.js , trainsed using Pytorch and Falai. ",
+		link: "https://www.linkedin.com/posts/kiritocode1_backend-ai-nextjs-activity-7151258822383218688-C6Na?utm_source=share&utm_medium=member_desktop",
 	},
 	{
-		title: "Google",
+		title: "Memories Ai Mental Health Helper",
 		description:
 			"A multinational technology company that specializes in Internet-related services and products.",
-		link: "https://google.com",
+		link: "https://memories-ai-helper.vercel.app",
 	},
 	{
-		title: "Meta",
+		title: "Image Search Algorthm using Vector databases",
 		description:
-			"A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-		link: "https://meta.com",
-	},
-	{
-		title: "Amazon",
-		description:
-			"A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-		link: "https://amazon.com",
-	},
-	{
-		title: "Microsoft",
-		description:
-			"A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-		link: "https://microsoft.com",
+			"An image search algorithm that uses vector databases to search for similar images. Shows implementation using weaviate and Next.js.",
+		link: "https://github.com/kiritocode1/weaviate-vec-ai-project-image-search",
 	},
 ];

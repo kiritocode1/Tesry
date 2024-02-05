@@ -17,12 +17,12 @@ export default function RootLayout({
 }>) {
   return (
 		<html lang="en">
-			<NavbarDemo />
 			<body
 				className={
 					inter.className +
 					" dark:bg-grid-white/[0.2] bg-grid-black/[0.2]  pt-20"
 				}>
+				<NavbarDemo />
 				{children}
 			</body>
 		</html>
