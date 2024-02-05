@@ -25,19 +25,18 @@ function Navbar({ className }: { className?: string }) {
 				className,
 			)}>
 			<Menu setActive={setActive}>
-
-					<Link href={"/"} className="dark:text-white ">
-					<MenuItem setActive={setActive} active={active} item="Home" >
-						Go back to main page</MenuItem>
-					</Link>
-
-
+				<Link href={"/"} className="dark:text-white ">
+					<MenuItem setActive={setActive} active={active} item="Home">
+						Go back to main page
+					</MenuItem>
+				</Link>
 
 				<MenuItem setActive={setActive} active={active} item="Products">
 					<div className="flex flex-col space-y-4 text-sm">
-						<HoveredLink href="/web-dev">Web Development</HoveredLink>
-						<HoveredLink href="/ai">Ai Products</HoveredLink>
-						<HoveredLink href="/game-dev">Game Development</HoveredLink>
+						<HoveredLink href="/web-dev">Website</HoveredLink>
+						<HoveredLink href="/chat">Chat(Apps)</HoveredLink>
+						<HoveredLink href="/ai">AI products</HoveredLink>
+						<HoveredLink href="/design">custom design / frontend</HoveredLink>
 					</div>
 				</MenuItem>
 				<MenuItem setActive={setActive} active={active} item="Team">

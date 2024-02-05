@@ -37,7 +37,7 @@ export const MenuItem = ({
 					animate={{ opacity: 1, scale: 1, y: 0 }}
 					transition={transition}>
 					{active === item && (
-						<div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
+						<div className="absolute top-[calc(100%_+_1.3rem)] left-1/2 transform -translate-x-1/2">
 							<motion.div
 								transition={transition}
 								layoutId="active" // layoutId ensures smooth animation
@@ -86,20 +86,30 @@ export const ProductItem = ({
 	role?:string
 }) => {
 	return (
-		<Link href={href} className="flex space-x-2" target="_blank">
+		<Link
+			href={href}
+			className="flex space-x-2 sm:flex-row flex-col"
+			target="_blank">
 			<Image
 				src={src}
 				width={140}
-				height={70}
+				height={40}
 				alt={title}
-				className="flex-shrink-0 rounded-md shadow-2xl"
+				className="flex-shrink-0 rounded-md shadow-2xl sm:flex hidden"
 			/>
+
+			<Image
+				src={src}
+				width={40}
+				height={40}
+				alt={title}
+				className="flex-shrink-0 rounded-md shadow-2xl sm:hidden overflow-hidden"/>
 			<div>
-				<h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+				<h4 className="sm:text-xl font-bold mb-1 text-black dark:text-white text-sm">
 					{title}
 				</h4>
-				<h4 className="text-md  italic ">{role ?? ""}</h4>
-				<p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+				<h4 className="sm:text-md  italic text-xs ">{role ?? ""}</h4>
+				<p className="text-neutral-700 md:text-sm sm:max-w-[10rem] dark:text-neutral-300 max-w-[8rem] text-xs">
 					{description}
 				</p>
 			</div>
