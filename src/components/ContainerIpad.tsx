@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "./ui/container-scroll-animation";
-import Fox from "./ui/Fox.jpg";
+import Fox from "./ui/fox.jpg";
 export function HeroScrollDemo() {
 	return (
 		<div className="flex flex-col overflow-hidden">
