@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/NavBar";
+import { UserButton } from "@clerk/nextjs";
+
 import { cn } from "@/utils/cn";
 import Fox from "./fox.jpg";
 import Bobby from "./portraits/Bobby.png";
@@ -82,6 +84,11 @@ function Navbar({ className }: { className?: string }) {
 						<HoveredLink href="/labs">Experimental stuff</HoveredLink>
 					</div>
 				</MenuItem>
+
+				<div className="flex gap-2 w-20">
+					<UserButton />
+					<Link href={"mailto:aryan@tesry.co"}>Contact </Link>
+				</div>
 			</Menu>
 		</div>
 	);
