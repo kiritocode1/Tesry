@@ -56,8 +56,8 @@ function Navbar({ className }: { className?: string }) {
 							role="Marketing Analyst"
 						/>
 						<ProductItem
-							title="Kundal Singh"
-							href="https://google.com"
+							title="Kundan Mane"
+							href="/"
 							src={Kundal.src}
 							description="Never thought I would work with our Robot overlords , but here we are"
 							role="Co-Founder"

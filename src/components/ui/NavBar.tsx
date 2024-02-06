@@ -86,10 +86,10 @@ export const ProductItem = ({
 	role?:string
 }) => {
 	return (
-		<Link
-			href={href}
+		<main
+
 			className="flex space-x-2 sm:flex-row flex-col"
-			target="_blank">
+			>
 			<Image
 				src={src}
 				width={140}
@@ -113,7 +113,7 @@ export const ProductItem = ({
 					{description}
 				</p>
 			</div>
-		</Link>
+		</main>
 	);
 };
 
