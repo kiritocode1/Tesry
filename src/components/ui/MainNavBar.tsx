@@ -39,7 +39,7 @@ function Navbar({ className }: { className?: string }) {
 						<HoveredLink href="/design">custom design / frontend</HoveredLink>
 					</div>
 				</MenuItem>
-				<MenuItem setActive={setActive} active={active} item="Team">
+				{/* <MenuItem setActive={setActive} active={active} item="Team">
 					<div className="  text-sm grid grid-cols-2 gap-10 p-4">
 						<ProductItem
 							title="Prabhdeep Singh"
@@ -70,7 +70,7 @@ function Navbar({ className }: { className?: string }) {
 							role="Developer & Designer"
 						/>
 					</div>
-				</MenuItem>
+				</MenuItem> */}
 				<MenuItem setActive={setActive} active={active} item="Blog">
 					<div className="flex flex-col space-y-4 text-sm">
 						<HoveredLink href="/blogs/hobby">Hobby</HoveredLink>

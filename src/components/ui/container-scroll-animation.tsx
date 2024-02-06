@@ -1,17 +1,12 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Image from "next/image";
+
 export const ContainerScroll = ({
-	users,
+
 	titleComponent,
 }: {
-	users: {
-		name: string;
-		designation: string;
-		image: string;
-		badge: string;
-	}[];
+
 	titleComponent: string | React.ReactNode;
 }) => {
 	const containerRef = useRef<any>(null);
@@ -41,7 +36,7 @@ export const ContainerScroll = ({
 
 	return (
 		<div
-			className="h-[80rem] flex items-center justify-center relative p-20"
+			className="h-[60rem] flex items-center justify-center relative p-20"
 			ref={containerRef}>
 			<div
 				className="py-40 w-full relative"
@@ -53,7 +48,7 @@ export const ContainerScroll = ({
 					rotate={rotate}
 					translate={translate}
 					scale={scale}
-					users={users}
+
 				/>
 			</div>
 		</div>
@@ -76,17 +71,12 @@ export const Card = ({
 	rotate,
 	scale,
 	translate,
-	users,
+
 }: {
 	rotate: any;
 	scale: any;
 	translate: any;
-	users: {
-		name: string;
-		designation: string;
-		image: string;
-		badge?: string;
-	}[];
+
 }) => {
 	return (
 		<motion.div
@@ -97,8 +87,8 @@ export const Card = ({
 					"0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
 			}}
 			className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] sm:p-6 p-2 bg-[#222222] rounded-[30px] shadow-2xl">
-			<div className="bg-gray-100 h-full w-full rounded-2xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-hidden p-4 dark:text-black text-9xl">
-				hello world
+			<div className="bg-gray-100 h-full w-full rounded-2xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 overflow-hidden p-4 dark:text-black  ">
+				<div className="bg-blue-500 lg:text-9xl md:text-4xl text-2xl     w-full lg:h-80 rounded-tr-full rounded-b-full  sm:h-20 h-20 md:pl-20 pl-2  font-mono dark:text-white">coming soon 🚀</div>
 			</div>
 		</motion.div>
 	);
