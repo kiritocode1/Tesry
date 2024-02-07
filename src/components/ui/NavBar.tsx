@@ -37,7 +37,7 @@ export const MenuItem = ({
 					animate={{ opacity: 1, scale: 1, y: 0 }}
 					transition={transition}>
 					{active === item && (
-						<div className="absolute top-[calc(100%_+_1.3rem)] left-1/2 transform -translate-x-1/2">
+						<div className="absolute -translate-y-1/8 left-1/2 transform -translate-x-1/2">
 							<motion.div
 								transition={transition}
 								layoutId="active" // layoutId ensures smooth animation

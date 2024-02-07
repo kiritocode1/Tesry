@@ -14,7 +14,7 @@ export function HeroScrollDemo() {
 						<h1 className="text-4xl font-semibold text-black dark:text-white flex flex-col">
 							Three clicks to
 							<span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-								Your own ChatBot
+								Your own AI Software
 							</span>
 						</h1>
 					</div>

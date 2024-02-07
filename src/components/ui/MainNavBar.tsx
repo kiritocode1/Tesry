@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/NavBar";
-import { UserButton } from "@clerk/nextjs";
-
+import { UserButton , SignInButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { cn } from "@/utils/cn";
 import Fox from "./fox.jpg";
 import Bobby from "./portraits/Bobby.png";
-import Kundal from "./portraits/Kundan.jpg";
+import Kundan from "./portraits/Kundan.jpg";
 import Triya from "./portraits/Triya.jpg"
 import Link from "next/link";
 export function NavbarDemo() {
@@ -20,6 +20,7 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
 	const [active, setActive] = useState<string | null>(null);
+	const {isSignedIn} = useUser();
 	return (
 		<div
 			className={cn(
@@ -28,17 +29,14 @@ function Navbar({ className }: { className?: string }) {
 			)}>
 			<Menu setActive={setActive}>
 				<Link href={"/"} className="dark:text-white ">
-					<MenuItem setActive={setActive} active={active} item="Home">
-						Go back to main page
-					</MenuItem>
+					Home
 				</Link>
 
-				<MenuItem setActive={setActive} active={active} item="Products">
+				<MenuItem setActive={setActive} active={active} item="CHAT">
 					<div className="flex flex-col space-y-4 text-sm">
-						<HoveredLink href="/web-dev">Website</HoveredLink>
-						<HoveredLink href="/chat">Chat(Apps)</HoveredLink>
-						<HoveredLink href="/ai">AI products</HoveredLink>
-						<HoveredLink href="/design">custom design / frontend</HoveredLink>
+						<HoveredLink href="/developement">Social Media bot</HoveredLink>
+						<HoveredLink href="/developement">AI Generated Chat</HoveredLink>
+
 					</div>
 				</MenuItem>
 				{/* <MenuItem setActive={setActive} active={active} item="Team">
@@ -73,20 +71,22 @@ function Navbar({ className }: { className?: string }) {
 						/>
 					</div>
 				</MenuItem> */}
-				<MenuItem setActive={setActive} active={active} item="Blog">
+				<MenuItem setActive={setActive} active={active} item="AI">
 					<div className="flex flex-col space-y-4 text-sm">
-						<HoveredLink href="/blogs/hobby">Hobby</HoveredLink>
-						<HoveredLink href="/blogs/team"> Team Experiences</HoveredLink>
+						<HoveredLink href="/developement">AI Products </HoveredLink>
+						<HoveredLink href="/developement">AI Game Developement</HoveredLink>
 					</div>
 				</MenuItem>
-				<MenuItem setActive={setActive} active={active} item="Labs">
+				{/* <MenuItem setActive={setActive} active={active} item="Labs">
 					<div className="flex flex-col space-y-4 text-sm">
 						<HoveredLink href="/labs">Experimental stuff</HoveredLink>
 					</div>
-				</MenuItem>
+				</MenuItem> */}
+				<Link href="/labs">Lab</Link>
 
 				<div className="flex gap-2 w-20">
-					<UserButton />
+					{isSignedIn?<UserButton />:
+					<SignInButton >Sign in  noww</SignInButton>}
 					<Link href={"mailto:aryan@tesry.co"}>Contact </Link>
 				</div>
 			</Menu>
