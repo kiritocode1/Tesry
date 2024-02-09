@@ -85,7 +85,7 @@ function Navbar({ className }: { className?: string }) {
 				</MenuItem> */}
 				<Link href="/labs">Lab</Link>
 
-				<div className="flex justify-evenly w-20 gap-4 ">
+				<div className="flex justify-evenly w-20 gap-4 items-center">
 					{isSignedIn ? (
 						<UserButton />
 					) : (
@@ -99,7 +99,7 @@ function Navbar({ className }: { className?: string }) {
 							</div>
 						</SignInButton>
 					)}
-					<Link href={"mailto:aryan@tesry.co"}>Contact </Link>
+					
 				</div>
 			</Menu>
 		</div>
