@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "mail": "email dev"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.6",
@@ -15,6 +16,7 @@
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@react-email/components": "0.0.14",
     "@tabler/icons-react": "^2.46.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "class-variance-authority": "^0.7.0",
@@ -23,9 +25,13 @@
     "lucide-react": "^0.322.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.1.0",
+    "openai": "^4.27.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-element-to-jsx-string": "^15.0.0",
+    "react-email": "2.0.0",
     "react-hook-form": "^7.50.0",
+    "resend": "^3.1.0",
     "tailwind-merge": "^2.2.1",
     "zod": "^3.22.4"
   },

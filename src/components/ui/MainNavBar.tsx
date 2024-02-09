@@ -9,6 +9,8 @@ import Bobby from "./portraits/Bobby.png";
 import Kundan from "./portraits/Kundan.jpg";
 import Triya from "./portraits/Triya.jpg"
 import Link from "next/link";
+import { Button } from "../ui/moving-borders";
+
 export function NavbarDemo() {
 	return (
 		<div className="relative w-full flex items-center justify-center">
@@ -36,7 +38,6 @@ function Navbar({ className }: { className?: string }) {
 					<div className="flex flex-col space-y-4 text-sm">
 						<HoveredLink href="/developement">Social Media bot</HoveredLink>
 						<HoveredLink href="/developement">AI Generated Chat</HoveredLink>
-
 					</div>
 				</MenuItem>
 				{/* <MenuItem setActive={setActive} active={active} item="Team">
@@ -84,9 +85,20 @@ function Navbar({ className }: { className?: string }) {
 				</MenuItem> */}
 				<Link href="/labs">Lab</Link>
 
-				<div className="flex gap-2 w-20">
-					{isSignedIn?<UserButton />:
-					<SignInButton >Sign in  noww</SignInButton>}
+				<div className="flex justify-evenly w-20 gap-4 ">
+					{isSignedIn ? (
+						<UserButton />
+					) : (
+						<SignInButton>
+							<div className="">
+								<Button
+									borderRadius="1.75rem"
+									className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 ">
+									Sign In
+								</Button>
+							</div>
+						</SignInButton>
+					)}
 					<Link href={"mailto:aryan@tesry.co"}>Contact </Link>
 				</div>
 			</Menu>
