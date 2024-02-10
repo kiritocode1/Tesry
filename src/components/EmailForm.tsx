@@ -26,9 +26,9 @@ const formSchema = z.object({
 
 
 
-		function onSubmit(values: z.infer<typeof formSchema>) {
-
-			console.log(values);
+async function onSubmit (values: z.infer<typeof formSchema>) {
+			const data = await fetch("/api/send", { method:"POST" , body: JSON.stringify(values)})
+			console.log(data);
 		}
 
 
