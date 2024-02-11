@@ -9,14 +9,16 @@ export async function POST(req:Request) {
         const { email } = await req.json();
         console.log(email);
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Acme <noreply@tesry.co>',
       to: [email],
       subject: "Hello world",
       react: EmailTemplate({ firstName: "user  from tesry" }) as React.ReactElement,
     });
 
     if (error) {
+      console.log(error);
       return Response.json({ error });
+
     }
 
     return Response.json({ data });
