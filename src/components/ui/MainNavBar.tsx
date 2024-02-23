@@ -4,12 +4,12 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/NavBar";
 import { UserButton , SignInButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
 import { cn } from "@/utils/cn";
-import Fox from "./fox.jpg";
-import Bobby from "./portraits/Bobby.png";
-import Kundan from "./portraits/Kundan.jpg";
-import Triya from "./portraits/Triya.jpg"
+// import Fox from "./fox.jpg";
+// import Bobby from "./portraits/Bobby.png";
+// import Kundan from "./portraits/Kundan.jpg";
+// import Triya from "./portraits/Triya.jpg"
 import Link from "next/link";
-import { Button } from "../ui/moving-borders";
+// import { Button } from "../ui/moving-borders";
 
 export function NavbarDemo() {
 	return (

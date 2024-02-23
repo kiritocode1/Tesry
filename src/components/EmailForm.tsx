@@ -51,10 +51,10 @@ export function EmailForm () {
 						<FormItem>
 							<FormLabel>Email</FormLabel>
 							<FormControl>
-								<Input placeholder="johndoe@gmail.com" {...field} className="text-black" />
+								<Input placeholder="johndoe@gmail.com" {...field} className="text-white bg-black accent-pink-500" />
 							</FormControl>
 
-							<FormMessage />
+							<FormMessage  />
 						</FormItem>
 					)}
 				/>

@@ -4,7 +4,7 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import Fox from "./fox.jpg";
 import Triya from "./portraits/Triya.jpg";
-import Bobby from "./portraits/Bobby.png";
+import kundan from "./portrait/Kundan.jpg";
 import {
 	IconBoxAlignRightFilled,
 	IconClipboardCopy,
@@ -184,7 +184,7 @@ const SkeletonFour = () => {
 				variants={first}
 				className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
 				<Image
-					src={Bobby}
+					src={kundan}
 					alt="avatar"
 					height="100"
 					width="100"
