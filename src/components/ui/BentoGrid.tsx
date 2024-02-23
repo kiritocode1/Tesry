@@ -4,7 +4,7 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import Fox from "./fox.jpg";
 import Triya from "./portraits/Triya.jpg";
-import kundan from "./portrait/Kundan.jpg";
+import kundan from "./portraits/Kundan.jpg";
 import {
 	IconBoxAlignRightFilled,
 	IconClipboardCopy,
